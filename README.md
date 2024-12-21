@@ -44,6 +44,8 @@ Here are some common usage examples:
 # List files in default bucket
 ./miragewyrm list
 
+./miragewyrm list -v -v
+
 # List files in a specific bucket
 ./miragewyrm list --bucket mybucket
 
