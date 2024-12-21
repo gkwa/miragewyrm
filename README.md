@@ -1,6 +1,6 @@
 # MirageWyrm
 
-MirageWyrm is a command-line tool for managing files in S3 buckets. It provides functionality to list objects and fetch files randomly from S3 buckets.
+MirageWyrm is a command-line tool for listing and fetching a random count of text files from  S3 buckets.
 
 ## Features
 
