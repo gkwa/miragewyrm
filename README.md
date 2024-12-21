@@ -44,20 +44,50 @@ Here are some common usage examples:
 # List files in default bucket
 ./miragewyrm list
 
-./miragewyrm list -v -v
+# Use verbose logging
+./miragewyrm list -v
 
 # List files in a specific bucket
 ./miragewyrm list --bucket mybucket
 
 # Fetch 10 random files from a specific bucket
-./miragewyrm fetch --bucket mybucket random --count=10
-
-# Use verbose logging
-./miragewyrm -v list
+./miragewyrm fetch --bucket mybucket random --count=10 -v -v
 
 # Use JSON format logging
 ./miragewyrm --log-format json list
 ```
+
+## Usage details
+
+```log
+root@ip-172-31-24-137:~# miragewyrm fetch random --count=3 -v -v
+3:43AM INF ../home/runner/work/miragewyrm/miragewyrm/fetch/fetcher.go:60 > Fetching manifest from S3... v=0
+tree data
+3:44AM INF ../home/runner/work/miragewyrm/miragewyrm/fetch/fetcher.go:65 > Found objects in bucket total=71896 v=0
+3:44AM INF ../home/runner/work/miragewyrm/miragewyrm/fetch/fetcher.go:68 > Filtered for missing files missing=71896 total=71896 v=0
+3:44AM INF ../home/runner/work/miragewyrm/miragewyrm/fetch/fetcher.go:70 > Selecting random files available=71896 requested=3 v=0
+3:44AM INF ../home/runner/work/miragewyrm/miragewyrm/fetch/fetcher.go:72 > Selected files for download count=3 v=0
+3:44AM INF ../home/runner/work/miragewyrm/miragewyrm/fetch/fetcher.go:143 > Downloading file key=data/cache/epub/18055/pg18055.txt to=data/cache/epub/18055/pg18055.txt v=0
+3:44AM INF ../home/runner/work/miragewyrm/miragewyrm/fetch/fetcher.go:169 > Downloaded file key=data/cache/epub/18055/pg18055.txt size_bytes=659297 to=data/cache/epub/18055/pg18055.txt v=0
+3:44AM INF ../home/runner/work/miragewyrm/miragewyrm/fetch/fetcher.go:143 > Downloading file key=data/cache/epub/33888/pg33888.txt to=data/cache/epub/33888/pg33888.txt v=0
+3:44AM INF ../home/runner/work/miragewyrm/miragewyrm/fetch/fetcher.go:169 > Downloaded file key=data/cache/epub/33888/pg33888.txt size_bytes=134174 to=data/cache/epub/33888/pg33888.txt v=0
+3:44AM INF ../home/runner/work/miragewyrm/miragewyrm/fetch/fetcher.go:143 > Downloading file key=data/cache/epub/117/pg117.txt to=data/cache/epub/117/pg117.txt v=0
+3:44AM INF ../home/runner/work/miragewyrm/miragewyrm/fetch/fetcher.go:169 > Downloaded file key=data/cache/epub/117/pg117.txt size_bytes=20734 to=data/cache/epub/117/pg117.txt v=0
+root@ip-172-31-24-137:~# tree data
+data
+`-- cache
+    `-- epub
+        |-- 117
+        |   `-- pg117.txt
+        |-- 18055
+        |   `-- pg18055.txt
+        `-- 33888
+            `-- pg33888.txt
+
+6 directories, 3 files
+root@ip-172-31-24-137:~#
+```
+
 
 ### Global Flags
 
