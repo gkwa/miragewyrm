@@ -3,9 +3,9 @@ module github.com/gkwa/miragewyrm
 go 1.23.4
 
 require (
-	github.com/aws/aws-sdk-go-v2 v1.39.5
-	github.com/aws/aws-sdk-go-v2/config v1.31.16
-	github.com/aws/aws-sdk-go-v2/service/s3 v1.89.1
+	github.com/aws/aws-sdk-go-v2 v1.39.6
+	github.com/aws/aws-sdk-go-v2/config v1.31.17
+	github.com/aws/aws-sdk-go-v2/service/s3 v1.89.2
 	github.com/fatih/color v1.18.0
 	github.com/go-git/go-git/v5 v5.16.3
 	github.com/go-logr/logr v1.4.3
