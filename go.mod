@@ -4,8 +4,8 @@ go 1.23.4
 
 require (
 	github.com/aws/aws-sdk-go-v2 v1.39.6
-	github.com/aws/aws-sdk-go-v2/config v1.31.18
-	github.com/aws/aws-sdk-go-v2/service/s3 v1.90.0
+	github.com/aws/aws-sdk-go-v2/config v1.31.19
+	github.com/aws/aws-sdk-go-v2/service/s3 v1.90.1
 	github.com/fatih/color v1.18.0
 	github.com/go-git/go-git/v5 v5.16.3
 	github.com/go-logr/logr v1.4.3
